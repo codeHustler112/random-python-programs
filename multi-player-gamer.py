@@ -34,7 +34,7 @@ else:
      while True:
         choice=input("Welcome Player-B. Roll the dice and see what you get. Press 'p' to play and 'q' to quit.\n").lower()
         if ( choice == 'p'):
-            total_score=gameplayA(scoreA)
+            total_score=gameplayB(scoreB)
             print(f"Total score {total_score}")
         elif choice == 'q':
             print("Goodbye!!")
