@@ -1,4 +1,8 @@
 import random
+# from multi_player_gamer import player  
+
+
+
 
 def gameplayA(scoreA):
    
@@ -30,3 +34,14 @@ def gameplayB(scoreB):
             exit()    
    
     return scoreB
+
+# def scores_for_a(player):
+#     while True:
+#         choice = input("Welcome Player-A. Press 'p' to roll the dice or 'q' to quit: ").lower()
+#         if choice == 'p':
+#             scoreA = gameplayA(scoreA)  
+#         elif choice == 'q':
+#             print("Goodbye!!")
+#             exit()
+#         else:
+#             print("Invalid input. Please press 'p' to play or 'q' to quit.")
