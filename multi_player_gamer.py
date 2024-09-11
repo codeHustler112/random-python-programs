@@ -12,33 +12,53 @@ from func import gameplayA, gameplayB
 scoreA = 0
 scoreB = 0
 
-player = input("You can play as Player-A or Player-B, choose either 'A' or 'B'. Play only during your turn: ").lower()
-
-if player == 'a':
+def go_to_playerA(scoreA, scoreB):
     while True:
-        choice = input("Welcome Player-A. Press 'p' to roll the dice or 'q' to quit: ").lower()
+        choice = input("Welcome Player-A. Press 'p' to roll the dice, 'b' to switch to Player-B, or 'q' to quit: ").lower()
         if choice == 'p':
             scoreA = gameplayA(scoreA)  
+        elif choice == 'b':
+            print(f"Total score of Player-A: {scoreA}")
+            return scoreA, scoreB  # Switch back to Player B
         elif choice == 'q':
             print("Goodbye!!")
             print(f"Total score of Player-A: {scoreA}")
-            exit()
-        else:
-            print("Invalid input. Please press 'p' to play or 'q' to quit.")
-    
-elif player == 'b':
-    while True:
-        choice = input("Welcome Player-B. Press 'p' to roll the dice or 'q' to quit: ").lower()
-        if choice == 'p':
-            scoreB = gameplayB(scoreB)  
-        elif choice == 'q':
-            print("Goodbye!!")
             print(f"Total score of Player-B: {scoreB}")
             exit()
         else:
-            print("Invalid input. Please press 'p' to play or 'q' to quit.")
-else:
-    print("Invalid player choice! Choose either 'A' or 'B'.")
+            print("Invalid input. Please press 'p' to play, 'b' to switch, or 'q' to quit.")
 
-print(f"Total score of Player-A: {scoreA}")
-print(f"Total score of Player-B: {scoreB}")
+def go_to_playerB(scoreA, scoreB):
+    while True:
+        choice = input("Welcome Player-B. Press 'p' to roll the dice, 'a' to switch to Player-A, or 'q' to quit: ").lower()
+        if choice == 'p':
+            scoreB = gameplayB(scoreB)  
+        elif choice == 'a':
+            print(f"Total score of Player-B: {scoreB}")
+            return scoreA, scoreB  # Switch back to Player A
+        elif choice == 'q':
+            print("Goodbye!!")
+            print(f"Total score of Player-A: {scoreA}")
+            print(f"Total score of Player-B: {scoreB}")
+            exit()
+        else:
+            print("Invalid input. Please press 'p' to play, 'a' to switch, or 'q' to quit.")
+
+# Main game loop
+while True:
+    player = input("You can play as Player-A or Player-B. Choose 'A' or 'B' (press 'q' to quit): ").lower()
+    
+    if player == 'a':
+        scoreA, scoreB = go_to_playerA(scoreA, scoreB)
+        
+    elif player == 'b':
+        scoreA, scoreB = go_to_playerB(scoreA, scoreB)
+        
+    elif player == 'q':
+        print("Goodbye!!")
+        exit()
+
+    else:
+        print("Invalid player choice! Choose either 'A' or 'B'.")
+
+

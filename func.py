@@ -15,7 +15,7 @@ def gameplayA(scoreA):
         scoreA+=dice
         print(f"total score now : {scoreA}")
         if ( scoreA >= 50):
-            print(f"Hurray you scored {scoreA}. YOU WON!!")
+            print(f"Hurray you scored {scoreA} Player A . YOU WON!!")
             exit()    
    
     return scoreA
@@ -30,7 +30,7 @@ def gameplayB(scoreB):
         scoreB+=dice
         print(f"total score now : {scoreB}")
         if ( scoreB >= 50):
-            print(f"Hurray you scored {scoreB}. YOU WON!!")
+            print(f"Hurray you scored {scoreB} Player B. YOU WON!!")
             exit()    
    
     return scoreB
