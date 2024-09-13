@@ -1,0 +1,10 @@
+Once upon a time in a land far away, there was a <adjective> princess who lived in a <noun>. 
+Every day, she would <verb> by the <body_of_water> and dream about her <noun>. 
+One day, a <adjective> dragon appeared and offered to take her to the <place>, 
+but only if she could solve his <noun>.
+
+The princess thought hard and finally said, "The answer is <noun>!" The dragon was so <adjective> 
+that he <verb> into the sky and disappeared. The princess then celebrated by throwing a big <noun> at 
+the <place> with her best friend, the <adjective> <animal>.
+
+They all lived <adverb> ever after.
